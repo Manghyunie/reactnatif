@@ -5,14 +5,13 @@ import { Todos, data } from './src/components/Todos';
 export default function App() {
   return (
     <View style={styles.container}>
+      
+      <View style={styles.header}><Text>Header</Text></View>
       <Todos />
-      <Text style={styles.firstparagraph}>Open up App.js to start working on your app!</Text>
-      <Text>{data[1]}</Text>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text>Open up App.js to start working on your app!</Text>
+      <View><Text>contenu A</Text></View>
+      <View><Text>contenu B</Text></View>
+      <View><Text>contenu B</Text></View>
+      <View style={styles.footer}><Text>Footer</Text></View>
       <StatusBar style="auto" />
     </View>
   );
@@ -23,10 +22,25 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'yellow',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
   },
 
   firstparagraph: {
     color: 'red',
+  },
+  
+  header: {
+    width: "100%",
+    alignItems: 'center',
+    backgroundColor: 'red',
+    padding: 10,
+  },
+
+  footer: {
+    width: "100%",
+    alignItems: 'center',
+    backgroundColor: 'red',
+    padding: 10,
   }
+
 });
